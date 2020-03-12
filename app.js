@@ -4,17 +4,23 @@ const server = express()
 
 server.use(express.json())
 
-// esquema para o Joi
-const schema = Joi.object({
-    name : Joi.string().min(3).required()
-})
-
 courses = [
     {id : 1, name : "course1" },
     {id : 2, name : "course2" },
     {id : 3, name : "course3" },
     {id : 4, name : "course4" },
 ]
+
+
+// Validando nossa requisiçaõ
+const ValidateCourse = (requisicao) => {
+
+    const schema = Joi.object({
+        name : Joi.string().min(3).required()
+    })
+
+    return schema.validate(requisicao)
+}
 
 // Rotas de GET
 server.get('/', (req, res) => {
@@ -38,7 +44,9 @@ server.get('/api/courses/:id', (req, res) => {
 
 server.post('/api/courses', (req, res) => {
 
-    const result = schema.validate(req.body)
+    const result = ValidateCourse(req.body)
+
+    console.log(result)
 
     if(result.error) 
     // Bad request
@@ -62,7 +70,7 @@ server.post('/api/courses', (req, res) => {
 //Rotas de put
 server.put('/api/courses/:id', (req, res) => {
 
-    const result = schema.validate(req.body)
+    const result = ValidateCourse(req.body)
 
     const course = courses.find(c => c.id === parseInt(req.params.id))
 
@@ -73,12 +81,29 @@ server.put('/api/courses/:id', (req, res) => {
         return res.status(400).send(result.error.details[0].message)   
 
     // encontrando o indíce na lista de onde foi encontrado o item com o id requerido    
-    indicedalista = courses.indexOf(course)
-    console.log(indicedalista)
-    courses[indicedalista].name  = req.body.name
+    // indicedalista = courses.indexOf(course)
+    // console.log(indicedalista)
+    // courses[indicedalista].name  = req.body.name
 
+    course.name = req.body.name
     res.send(courses)
 
+})
+
+// Rotas de delete
+
+server.delete('/api/courses/:id', (req, res) => {
+
+    const course = courses.find(c => c.id === parseInt(req.params.id))
+
+    if (!course)
+        return res.status(404).send("Não existe nenhum curso com esse ID.")
+
+    indiceDaLista = courses.indexOf(course)
+    
+    courses.splice(indiceDaLista, 1)    
+
+    res.send(course)
 })
 
 server.listen(3002, () => console.log('Escutando na porta 3002...'))
