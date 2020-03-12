@@ -1,9 +1,27 @@
 const express = require('express')
 const server = express()
+const helmet = require('helmet')
+const morgan = require('morgan')
+
+// MiddleWares
 const ValidateInput = require('./ValidateInput')
+const logger = require('./logger.js')
+const authenticator = require('./authenticator.js')
 
+server.use(helmet())
+server.use(logger)
+server.use(authenticator)
+server.use(express.static('public'))
 server.use(express.json())
+server.use(express.urlencoded({extended : false}))
 
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+console.log(`server: ${server.get('env')}`)
+
+if (server.get('env') === 'development') {
+    server.use(morgan('tiny'))    
+    console.log('Morgan enabled...')
+}
 
 genres = [
     {id : 1, genero : 'romance'},
