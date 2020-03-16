@@ -1,7 +1,10 @@
+const config = require('config')
 const express = require('express')
 const server = express()
 const helmet = require('helmet')
 const morgan = require('morgan')
+const fs = require('fs')
+const path = require('path')
 
 // MiddleWares
 const ValidateInput = require('./ValidateInput')
@@ -18,8 +21,19 @@ server.use(express.urlencoded({extended : false}))
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 console.log(`server: ${server.get('env')}`)
 
+// Configuration
+console.log('Application Name: ' + config.get('name'))    
+console.log('Mail server: ' + config.get('mail.host'))
+console.log('password server: ' + config.get('mail.password'))    
+
+
+
 if (server.get('env') === 'development') {
-    server.use(morgan('tiny'))    
+    // create a write stream (in append mode)
+    var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
+    // setup the logger
+    server.use(morgan('tiny', {stream : accessLogStream}))    
     console.log('Morgan enabled...')
 }
 
