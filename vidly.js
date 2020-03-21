@@ -28,6 +28,7 @@ server.use('/', inicial)
 server.use('/api/genres', genres)
 
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+console.log(`DEBUG: ${process.env.DEBUG}`)
 console.log(`server: ${server.get('env')}`)
 
 // Configuration
