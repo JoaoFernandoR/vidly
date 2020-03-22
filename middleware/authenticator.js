@@ -1,5 +1,5 @@
 const authenticator = (req, res, next) => {
-    console.log("Authenticating...")
+    // db("Authenticating...")
     next()
 }
 

@@ -9,8 +9,6 @@ genres = [
     {id : 3, genero : 'comédia'},
 ]
 
-
-
 //Aqui iramos mudar api/genres, apenas para "/" porque em vidly.js já definimos a rota /api/genres
 routes.get('/', (req, res) => {
     res.send(genres)
@@ -62,7 +60,7 @@ routes.put('/:id', (req, res) => {
     const sameGenre  = genres.find(c => c.genero === req.body.genero)
 
     if (sameGenre)
-        return res.status(400).send('Já existe um gênero com esse mesmo nome')
+        return res.status(400).send('Já existe um gênero com esse nome')
     
     const result = ValidateInput(req.body)
 

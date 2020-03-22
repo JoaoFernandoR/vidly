@@ -17,26 +17,11 @@ const logger = require('./middleware/logger.js')
 const authenticator = require('./middleware/authenticator.js')
 
 server.use(helmet())
-server.use(logger)
-server.use(authenticator)
 server.use(express.static('public'))
 server.use(express.json())
 server.use(express.urlencoded({extended : false}))
-
-//Rotas
-server.use('/', inicial)
-server.use('/api/genres', genres)
-
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
-console.log(`DEBUG: ${process.env.DEBUG}`)
-console.log(`server: ${server.get('env')}`)
-
-// Configuration
-console.log('Application Name: ' + config.get('name'))    
-console.log('Mail server: ' + config.get('mail.host'))
-// console.log('password server: ' + config.get('mail.password'))    
-
-
+server.use(logger)
+server.use(authenticator)
 
 if (server.get('env') === 'development') {
     // create a write stream (in append mode)
@@ -47,6 +32,21 @@ if (server.get('env') === 'development') {
     // console.log('Morgan enabled...')
     startupDebugger('Morgan enabled')
 }
+
+
+//Rotas
+server.use('/', inicial)
+server.use('/api/genres', genres)
+
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+// console.log(`DEBUG: ${process.env.DEBUG}`)
+console.log(`server: ${server.get('env')}`)
+
+// Configuration
+// console.log('Application Name: ' + config.get('name'))    
+// console.log('Mail server: ' + config.get('mail.host'))
+// console.log('password server: ' + config.get('mail.password'))    
+
 
 //Db work...
 dbDebugger('Connected to the database...')

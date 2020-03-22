@@ -1,5 +1,5 @@
 const logger = (req, res, next) => {
-    console.log("Logging...")
+    // db("Logging...")
     next()
 }
 
