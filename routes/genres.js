@@ -1,93 +1,91 @@
 const express = require('express')
 const routes = express.Router()
-
 const ValidateInput = require('../ValidateInput')
-
-genres = [
-    {id : 1, genero : 'romance'},
-    {id : 2, genero : 'terror'},
-    {id : 3, genero : 'comédia'},
-]
+const Genre = require('../schemas/Genre')
 
 //Aqui iramos mudar api/genres, apenas para "/" porque em vidly.js já definimos a rota /api/genres
-routes.get('/', (req, res) => {
-    res.send(genres)
+routes.get('/', async (req, res) => {
+    const genre = await Genre.find().sort({genero : 1}).select({_id : 1, genero : 1})
+    res.send(genre)
 })
 
-routes.get('/:id', (req, res) => {
+routes.get('/:id', async (req, res) => {
+    try {
+        const genre = await Genre.find({_id : req.params.id})
+        res.send(genre[0].genero)
 
-    const genre = genres.find(c => c.id === parseInt(req.params.id))
+    }
+    catch(err) {
+        res.status(404).send('Não há nenhum gênero com esse id.')
+    }
 
-    if (!genre) 
-        return res.status(404).send('Não há nenhum gênero com esse ID') 
-
-    res.send(genre.genero)
 })
 
 //Rotas de Post
-
-routes.post('/', (req, res) => {
+routes.post('/', async (req, res) => {
 
     const result = ValidateInput(req.body)
 
     if (result.error)
         return res.status(400).send(result.error.details[0].message)
+    
+    const findInDb = await Genre.find({genero : req.body.genero})
 
-    const sameGenre  = genres.find(c => c.genero === req.body.genero)
+    if(findInDb.length >= 1)
+        return res.status(400).send('Já existe esse gênero no bando de dados...')
 
-    if (sameGenre)
-        return res.status(400).send('Já existe um gênero com esse mesmo nome')
+    try{
+        const genre = new Genre({
+            genero : result.value.genero
+        })
+    
+        const newGenre = await genre.save()
+        res.send(newGenre)
+    }catch(err) { console.log('erro :', err)}
 
-    newGenre = {
-        id : genres.length + 1,
-        genero : req.body.genero
-    }
-
-    genres.push(newGenre)
-
-    res.send(newGenre)
 })
 
 // Atualizando uma entrada
 
-routes.put('/:id', (req, res) => {
-   
-    const genre = genres.find(c => c.id === parseInt(req.params.id))
-    
-    if (!genre) 
-        return res.status(404).send('Não há nenhum gênero com esse ID') 
+routes.put('/:id', async (req, res) => {
+    try{
 
-    const sameGenre  = genres.find(c => c.genero === req.body.genero)
-
-    if (sameGenre)
-        return res.status(400).send('Já existe um gênero com esse nome')
+    const findInDb = await Genre.find({genero : req.body.genero})
     
+    if(findInDb.length >= 1)
+        return res.status(400).send('Já existe esse gênero no bando de dados...')
+        
     const result = ValidateInput(req.body)
 
     if (result.error)
         return res.status(400).send(result.error.details[0].message)
+
+    const genre = await Genre.findByIdAndUpdate(req.params.id, {
+        genero : result.value.genero
+    }, {new : true})
+    res.send(genre)
+
+    }
+    catch(err) {
+        res.status(404).send("Não há no banco de dados documento com esse ID")
+    }
+
     
-    genre.genero = req.body.genero
-    res.send(genre)   
 
 })
 
 //Deletando uma entrada
 
-routes.delete('/:id', (req, res) => {
+routes.delete('/:id', async (req, res) => {
 
-    // Learn to not get the same ID in the array after deleting a entry.
-    // But after all when i learn to deal with databases the ID will be assign automatically.
+    try {
+        const genre = await Genre.findByIdAndRemove(req.params.id)
+        res.send(genre)
 
-    const genre = genres.find(c => c.id === parseInt(req.params.id))
-    
-    if (!genre) 
-        return res.status(404).send('Não há nenhum gênero com esse ID') 
-
-    const index = genres.indexOf(genre)
-    genres.splice(index, 1)
-
-    res.send(genre)
+    }
+    catch(err) {
+        res.status(404).send('Não há nenhum gênero com esse id.')
+    }
 
 })
 

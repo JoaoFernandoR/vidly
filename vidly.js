@@ -1,13 +1,14 @@
 const startupDebugger = require('debug')('startup')
 const dbDebugger = require('debug')('db')
 
-const config = require('config')
 const express = require('express')
 const server = express()
+// const config = require('config')
 const helmet = require('helmet')
 const morgan = require('morgan')
 const fs = require('fs')
 const path = require('path')
+const mongoose = require('mongoose')
 //rotas
 const genres = require('./routes/genres')
 const inicial = require('./routes/inicial')
@@ -28,7 +29,7 @@ if (server.get('env') === 'development') {
     var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
     // setup the logger
-    server.use(morgan('tiny', {stream : accessLogStream}))    
+    server.use(morgan(':date[web] :method :status :response-time ms', {stream : accessLogStream}))    
     // console.log('Morgan enabled...')
     startupDebugger('Morgan enabled')
 }
@@ -38,17 +39,20 @@ if (server.get('env') === 'development') {
 server.use('/', inicial)
 server.use('/api/genres', genres)
 
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+// console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 // console.log(`DEBUG: ${process.env.DEBUG}`)
-console.log(`server: ${server.get('env')}`)
+// console.log(`server: ${server.get('env')}`)
 
 // Configuration
 // console.log('Application Name: ' + config.get('name'))    
 // console.log('Mail server: ' + config.get('mail.host'))
 // console.log('password server: ' + config.get('mail.password'))    
 
-
 //Db work...
-dbDebugger('Connected to the database...')
+mongoose.connect('mongodb://localhost/playground', 
+{useNewUrlParser : true, useUnifiedTopology : true, useFindAndModify : false}
+).then(() => console.log('Connected to the Database...'))
+.catch((err) => console.log('Não conectado a database', err.message))    
+
 
 server.listen(3000, () => console.log('Porta 3000 aberta. Escutando...'))
