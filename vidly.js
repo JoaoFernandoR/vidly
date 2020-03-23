@@ -12,6 +12,7 @@ const mongoose = require('mongoose')
 //rotas
 const genres = require('./routes/genres')
 const inicial = require('./routes/inicial')
+const customers = require('./routes/customers')
 
 // MiddleWares
 const logger = require('./middleware/logger.js')
@@ -38,6 +39,7 @@ if (server.get('env') === 'development') {
 //Rotas
 server.use('/', inicial)
 server.use('/api/genres', genres)
+server.use('/api/customers', customers)
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 // console.log(`DEBUG: ${process.env.DEBUG}`)

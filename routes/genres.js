@@ -1,7 +1,6 @@
 const express = require('express')
 const routes = express.Router()
-const ValidateInput = require('../ValidateInput')
-const Genre = require('../schemas/Genre')
+const { Genre, ValidateInput } = require('../schemas/Genre')
 
 //Aqui iramos mudar api/genres, apenas para "/" porque em vidly.js já definimos a rota /api/genres
 routes.get('/', async (req, res) => {
