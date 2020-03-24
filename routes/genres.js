@@ -38,8 +38,8 @@ routes.post('/', async (req, res) => {
             genero : result.value.genero
         })
     
-        const newGenre = await genre.save()
-        res.send(newGenre)
+        await genre.save()
+        res.send(genre)
     }catch(err) { console.log('erro :', err)}
 
 })

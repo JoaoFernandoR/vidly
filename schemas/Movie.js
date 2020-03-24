@@ -35,7 +35,7 @@ const ValidateInput = (entrada) => {
 
     const schema = Joi.object({
         title : Joi.string().min(3).required().max(50),
-        genreId : Joi.string().required(),
+        genreId : Joi.objectId().required(),
         numberInStock : Joi.number().min(0).required().max(255),
         dailyRentalRate : Joi.number().min(0).required().max(255),
     })

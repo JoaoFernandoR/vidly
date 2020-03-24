@@ -30,8 +30,8 @@ routes.post('/', async (req, res) => {
         phone : result.value.phone
     })
 
-    const newCustomer = await customer.save()
-    res.send(newCustomer)
+    await customer.save()
+    res.send(customer)
 
 })
 

@@ -29,7 +29,8 @@ const Customers = new mongoose.Schema({
         type : Number,
         required : true,
         minlength : 10,
-        maxlength : 25
+        maxlength : 25,
+        unique : true
     }
 })
 

@@ -11,10 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.0",
+    "bcrypt": "^4.0.1",
     "config": "^3.3.0",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "helmet": "^3.21.3",
+    "joi-objectid": "^3.0.1",
+    "joi-password-complexity": "^4.1.0",
+    "lodash": "^4.17.15",
     "moment-timezone": "^0.5.28",
     "mongoose": "^5.9.5",
     "morgan": "^1.9.1"

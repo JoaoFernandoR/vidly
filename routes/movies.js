@@ -33,8 +33,8 @@ routes.post('/', async (req, res) => {
             dailyRentalRate : result.value.dailyRentalRate
         })
     
-        const newMovie = await movie.save()
-        res.send(newMovie)
+        await movie.save()
+        res.send(movie)
     }    
     catch(err){
         return res.status(400).send('Invalid genre.');

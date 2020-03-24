@@ -1,6 +1,8 @@
 const startupDebugger = require('debug')('startup')
 const dbDebugger = require('debug')('db')
 
+const Joi = require('@hapi/joi')
+Joi.objectId = require('joi-objectid')(Joi) 
 const express = require('express')
 const server = express()
 // const config = require('config')
@@ -14,6 +16,8 @@ const genres = require('./routes/genres')
 const inicial = require('./routes/inicial')
 const customers = require('./routes/customers')
 const movies = require('./routes/movies')
+const rentals = require('./routes/rentals')
+const users = require('./routes/users')
 
 // MiddleWares
 const logger = require('./middleware/logger.js')
@@ -42,6 +46,8 @@ server.use('/', inicial)
 server.use('/api/genres', genres)
 server.use('/api/customers', customers)
 server.use('/api/movies', movies)
+server.use('/api/rentals', rentals)
+server.use('/api/users', users)
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 // console.log(`DEBUG: ${process.env.DEBUG}`)
@@ -54,7 +60,7 @@ server.use('/api/movies', movies)
 
 //Db work...
 mongoose.connect('mongodb://localhost/playground', 
-{useNewUrlParser : true, useUnifiedTopology : true, useFindAndModify : false}
+{useNewUrlParser : true, useUnifiedTopology : true, useFindAndModify : false, useCreateIndex : true}
 ).then(() => console.log('Connected to the Database...'))
 .catch((err) => console.log('Não conectado a database', err.message))    
 
