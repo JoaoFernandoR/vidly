@@ -25,4 +25,5 @@ const Genres = new mongoose.Schema({
 const Genre = mongoose.model('Genres', Genres)
 
 module.exports.Genre = Genre
+module.exports.Genres = Genres
 module.exports.ValidateInput = ValidateInput

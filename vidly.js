@@ -13,6 +13,7 @@ const mongoose = require('mongoose')
 const genres = require('./routes/genres')
 const inicial = require('./routes/inicial')
 const customers = require('./routes/customers')
+const movies = require('./routes/movies')
 
 // MiddleWares
 const logger = require('./middleware/logger.js')
@@ -40,6 +41,7 @@ if (server.get('env') === 'development') {
 server.use('/', inicial)
 server.use('/api/genres', genres)
 server.use('/api/customers', customers)
+server.use('/api/movies', movies)
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 // console.log(`DEBUG: ${process.env.DEBUG}`)
