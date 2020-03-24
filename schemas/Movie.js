@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Joi = require('@hapi/joi')
+Joi.objectId = require('joi-objectid')(Joi)
 const { Genres } = require('./Genre')
 
 const Movies = new mongoose.Schema({
@@ -9,6 +10,7 @@ const Movies = new mongoose.Schema({
         max : 50,
         required : true,
         trim : true,
+        unique : true
     },
     genre : {
         type : Genres,

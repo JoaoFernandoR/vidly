@@ -1,3 +1,5 @@
+const auth = require('../middleware/auth')
+const admin = require('../middleware/admin')
 const express = require('express')
 const routes = express.Router()
 const { Genre, ValidateInput } = require('../schemas/Genre')
@@ -21,7 +23,7 @@ routes.get('/:id', async (req, res) => {
 })
 
 //Rotas de Post
-routes.post('/', async (req, res) => {
+routes.post('/', auth, async (req, res) => {
 
     const result = ValidateInput(req.body)
 
@@ -75,7 +77,7 @@ routes.put('/:id', async (req, res) => {
 
 //Deletando uma entrada
 
-routes.delete('/:id', async (req, res) => {
+routes.delete('/:id',[auth, admin], async (req, res) => {
 
     try {
         const genre = await Genre.findByIdAndRemove(req.params.id)

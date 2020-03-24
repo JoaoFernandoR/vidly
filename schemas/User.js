@@ -1,12 +1,14 @@
 const mongoose = require('mongoose')
 const Joi = require('@hapi/joi')
 const passwordComplexity = require('joi-password-complexity');
+const jwt = require('jsonwebtoken')
+const config = require('config')
 
 const ValidateUser = (entrada) => {
 
   const complexityOptions = {
     min: 5,
-    max: 30,
+    max: 255,
     lowerCase: 1,
     upperCase: 1,
     numeric: 1,
@@ -44,10 +46,17 @@ const userSchema = new mongoose.Schema({
   password : {
     type : String,
     minlength : 5,
-    maxlength : 30,
+    maxlength : 255,
     required : true,
-  }  
+  },
+  isAdmin : Boolean  
 })
+
+// Como estamo referenciando com this, não podemos usar a arrow function.
+userSchema.methods.generateAuthToken = function() {
+  const token = jwt.sign({_id : this._id, isAdmin : this.isAdmin}, config.get('jwtPrivateKey'))
+  return token
+}
 
 const User = mongoose.model('User', userSchema)
 

@@ -1,5 +1,5 @@
+const auth = require('../middleware/auth')
 const express = require('express')
-const mongoose = require('mongoose')
 const routes = express.Router()
 const { Movie, ValidateInput} = require('../schemas/Movie')
 const { Genre } = require('../schemas/Genre')
@@ -9,7 +9,7 @@ routes.get('/', async (req, res) => {
     res.send(movies)
 })
 
-routes.post('/', async (req, res) => {
+routes.post('/', auth, async (req, res) => {
     const result = ValidateInput(req.body)
     
     if (result.error)
@@ -18,7 +18,7 @@ routes.post('/', async (req, res) => {
     const findInDb = await Movie.find({title : req.body.title})
     
     if(findInDb.length >= 1)
-        return res.status(400).send('Já existe esse gênero no bando de dados...')
+        return res.status(400).send('Já existe esse filme no bando de dados...')
 
     try{
         const genre = await Genre.findById(req.body.genreId);

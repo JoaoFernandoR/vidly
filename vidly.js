@@ -1,11 +1,6 @@
-const startupDebugger = require('debug')('startup')
-const dbDebugger = require('debug')('db')
-
-const Joi = require('@hapi/joi')
-Joi.objectId = require('joi-objectid')(Joi) 
 const express = require('express')
 const server = express()
-// const config = require('config')
+const config = require('config')
 const helmet = require('helmet')
 const morgan = require('morgan')
 const fs = require('fs')
@@ -18,7 +13,7 @@ const customers = require('./routes/customers')
 const movies = require('./routes/movies')
 const rentals = require('./routes/rentals')
 const users = require('./routes/users')
-
+const auth = require('./routes/auth')
 // MiddleWares
 const logger = require('./middleware/logger.js')
 const authenticator = require('./middleware/authenticator.js')
@@ -37,9 +32,13 @@ if (server.get('env') === 'development') {
     // setup the logger
     server.use(morgan(':date[web] :method :status :response-time ms', {stream : accessLogStream}))    
     // console.log('Morgan enabled...')
-    startupDebugger('Morgan enabled')
+    console.log('Morgan enabled')
 }
 
+if (!config.get('jwtPrivateKey')) {
+    console.error('FATAL ERROR: jwtPrivateKey is not defined')
+    process.exit(1)
+}
 
 //Rotas
 server.use('/', inicial)
@@ -48,6 +47,7 @@ server.use('/api/customers', customers)
 server.use('/api/movies', movies)
 server.use('/api/rentals', rentals)
 server.use('/api/users', users)
+server.use('/api/auth', auth)
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 // console.log(`DEBUG: ${process.env.DEBUG}`)
