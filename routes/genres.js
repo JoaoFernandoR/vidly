@@ -1,13 +1,17 @@
-const auth = require('../middleware/auth')
-const admin = require('../middleware/admin')
 const express = require('express')
 const routes = express.Router()
+// Modules
 const { Genre, ValidateInput } = require('../schemas/Genre')
+// Middlewares
+const auth = require('../middleware/auth')
+const admin = require('../middleware/admin')
 
-//Aqui iramos mudar api/genres, apenas para "/" porque em vidly.js já definimos a rota /api/genres
 routes.get('/', async (req, res) => {
-    const genre = await Genre.find().sort({genero : 1}).select({_id : 1, genero : 1})
+
+    const genre = await Genr.find().sort({genero : 1}).select({_id : 1, genero : 1})
+
     res.send(genre)
+
 })
 
 routes.get('/:id', async (req, res) => {
@@ -22,7 +26,6 @@ routes.get('/:id', async (req, res) => {
 
 })
 
-//Rotas de Post
 routes.post('/', auth, async (req, res) => {
 
     const result = ValidateInput(req.body)
@@ -36,17 +39,21 @@ routes.post('/', auth, async (req, res) => {
         return res.status(400).send('Já existe esse gênero no bando de dados...')
 
     try{
+
         const genre = new Genre({
             genero : result.value.genero
         })
     
         await genre.save()
+
         res.send(genre)
-    }catch(err) { console.log('erro :', err)}
+
+    }
+    catch(err) { 
+        console.log('erro :', err)
+    }
 
 })
-
-// Atualizando uma entrada
 
 routes.put('/:id', async (req, res) => {
     try{
@@ -75,7 +82,6 @@ routes.put('/:id', async (req, res) => {
 
 })
 
-//Deletando uma entrada
 
 routes.delete('/:id',[auth, admin], async (req, res) => {
 

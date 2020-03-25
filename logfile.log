@@ -1,0 +1,480 @@
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7"}
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7"}
+{"level":"error"}
+{"message":"error","level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7"}
+{"level":"error"}
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7"}
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7","timestamp":"2020-03-25T16:44:01.543Z"}
+{"level":"error","timestamp":"2020-03-25T16:44:40.738Z"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2020-03-25T16:49:05.313Z"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2020-03-25T16:49:17.253Z"}
+{"level":"error","timestamp":"2020-03-25T16:49:39.718Z"}
+{"level":"error","timestamp":"2020-03-25T17:03:45.486Z"}
+{"level":"error","timestamp":"2020-03-25 14:06:03"}
+{"level":"error","timestamp":"2020-03-25 14:18:33"}
+{"level":"error","message":"undefinedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7","timestamp":"2020-03-25 14:22:29"}
+{"level":"error","message":"Genr is not definedGenr is not defined","stack":"ReferenceError: Genr is not defined\n    at /home/joaofernando/NodeJS/vidly/routes/genres.js:11:19\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/route.js:112:3)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:335:12)\n    at next (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:174:3)\n    at router (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:47:12)\n    at newFn (/home/joaofernando/NodeJS/vidly/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:317:13)\n    at /home/joaofernando/NodeJS/vidly/node_modules/express/lib/router/index.js:284:7","timestamp":"2020-03-25 14:23:13"}
+{"level":"error","message":"Genr is not defined","timestamp":"2020-03-25 14:28:28"}
+{
+  level: 'error',
+  message: 'Genr is not defined',
+  timestamp: '2020-03-25 14:31:48'
+}
+{
+  level: 'error',
+  message: 'Genr is not defined',
+  timestamp: '2020-03-25 14:34:33'
+}
+{
+  level: 'error',
+  message: 'Genr is not defined',
+  timestamp: '2020-03-25 14:35:18'
+}
+{
+  level: 'error',
+  message: 'Genr is not defined',
+  timestamp: '2020-03-25 14:42:58'
+}
+{
+  level: 'error',
+  message: 'Genr is not defined',
+  timestamp: '2020-03-25 14:43:02'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:44:58'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:45:50'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:54:51'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:55:46'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:56:12'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 15:59:53'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:59:53'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 15:59:54'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 15:59:54'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:00:53'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:00:53'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:01:00'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:01:00'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:01:32'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:01:47'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:01:47'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:12:47'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:12:47'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:12:47'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:12:47'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:13:45'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:13:45'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:14:34'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:14:34'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:16:24'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:16:24'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:18:01'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:18:01'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:18:02'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:18:02'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:23'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:23'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:34'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:34'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:42'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:23:42'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:24:08'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:24:08'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:24:48'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:24:48'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:25:24'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:25:25'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:25:55'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:25:56'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:27:27'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:28:00'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:29:38'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:29:39'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:32:22'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:32:24'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:32:24'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:08'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:09'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:09'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:17'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:18'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:18'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:35'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:36'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:33:36'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:00'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:01'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:01'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:21'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:21'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:34:21'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:52:33'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:52:34'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:52:34'
+}
+{
+  message: 'Morgan enabled',
+  level: '\u001b[32minfo\u001b[39m',
+  timestamp: '2020-03-25 16:52:50'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: '\u001b[32minfo\u001b[39m',
+  timestamp: '2020-03-25 16:52:51'
+}
+{
+  message: 'Connected to the Database...',
+  level: '\u001b[32minfo\u001b[39m',
+  timestamp: '2020-03-25 16:52:51'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:15'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:16'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:16'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:51'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:51'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:53:51'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 16:58:36'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 16:58:37'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 16:58:37'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:01'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:02'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:02'
+}
+{
+  message: 'Morgan enabled',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:23'
+}
+{
+  message: 'Porta 3000 aberta. Escutando...',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:23'
+}
+{
+  message: 'Connected to the Database...',
+  level: 'info',
+  timestamp: '2020-03-25 17:01:23'
+}
